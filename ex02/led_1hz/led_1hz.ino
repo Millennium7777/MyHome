@@ -1,4 +1,4 @@
-const int ledPin = 2;
+const int ledPin = 13;
 unsigned long prevTime = 0;
 const unsigned long interval = 500;
 
@@ -8,8 +8,7 @@ void setup() {
 
 void loop() {
   unsigned long curTime = millis();
-  // 计时到达间隔，翻转LED状态
-  if (curTime - prevTime >= interval) {
+  if(curTime - prevTime >= interval){
     digitalWrite(ledPin, !digitalRead(ledPin));
     prevTime = curTime;
   }
