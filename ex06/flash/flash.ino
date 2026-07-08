@@ -11,12 +11,12 @@ void loop() {
   for(int brightness = 0; brightness <= 255; brightness++){
     analogWrite(LED_YELLOW, brightness);
     analogWrite(LED_RED, 255 - brightness);
-    delay(20);
+    delay(1);
   }
   // 黄灯渐暗，红灯同步渐亮
   for(int brightness = 255; brightness >= 0; brightness--){
     analogWrite(LED_YELLOW, brightness);
     analogWrite(LED_RED, 255 - brightness);
-    delay(20);
+    delay(1);
   }
 }
